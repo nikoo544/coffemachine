@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://main001"]
+[gd_scene load_steps=7 format=3 uid="uid://main001"]
 
 [ext_resource type="Script" path="res://src/scripts/Main.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://coffeemachine001" path="res://src/scenes/CoffeeMachine.tscn" id="2_machine"]
 [ext_resource type="PackedScene" uid="uid://customer001" path="res://src/scenes/Customer.tscn" id="3_customer"]
 [ext_resource type="PackedScene" uid="uid://phone001" path="res://src/scenes/Phone.tscn" id="4_phone"]
+[ext_resource type="PackedScene" uid="uid://ingredientdispenser001" path="res://src/scenes/IngredientDispenser.tscn" id="5_dispenser"]
+[ext_resource type="PackedScene" uid="uid://recipeboard001" path="res://src/scenes/RecipeBoard.tscn" id="6_board"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_script")
@@ -14,13 +16,24 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.8, 0.7, 0.6, 1)
 
+[node name="RecipeBoard" parent="." instance=ExtResource("6_board")]
+position = Vector2(450, 50)
+
 [node name="CoffeeMachine" parent="." instance=ExtResource("2_machine")]
-position = Vector2(200, 360)
+position = Vector2(150, 450)
+
+[node name="CafeDispenser" parent="." instance=ExtResource("5_dispenser")]
+position = Vector2(350, 450)
+ingredient_name = "Cafe"
+
+[node name="LecheDispenser" parent="." instance=ExtResource("5_dispenser")]
+position = Vector2(550, 450)
+ingredient_name = "Leche"
 
 [node name="CustomerSpawner" type="Node2D" parent="."]
 
 [node name="SpawnPoint" type="Marker2D" parent="CustomerSpawner"]
-position = Vector2(1000, 360)
+position = Vector2(1000, 450)
 
 [node name="Timer" type="Timer" parent="CustomerSpawner"]
 wait_time = 5.0

@@ -16,12 +16,20 @@ offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
-color = Color(0.6, 0.4, 0.2, 1)
+color = Color(1, 1, 1, 1) # White cup base
+
+[node name="Liquid" type="ColorRect" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+color = Color(0.6, 0.4, 0.2, 1) # Will be changed by script
 
 [node name="Label" type="Label" parent="."]
 offset_left = -20.0
 offset_top = -40.0
 offset_right = 20.0
 offset_bottom = -17.0
-text = "Cafe"
+text = "Vacio"
 horizontal_alignment = 1

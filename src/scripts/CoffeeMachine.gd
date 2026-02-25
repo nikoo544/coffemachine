@@ -11,16 +11,15 @@ func _ready():
 func _on_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			make_coffee()
+			spawn_cup()
 
-func make_coffee():
+func spawn_cup():
 	if coffee_scene:
 		var new_coffee = coffee_scene.instantiate()
 		# Add to the parent scene (Main), not to the machine itself, so it doesn't move with the machine
-		# But ensure parent exists.
 		if get_parent():
 			get_parent().add_child(new_coffee)
 			new_coffee.global_position = global_position + spawn_offset
-			print("Coffee Made!")
+			print("Cup Spawned!")
 	else:
 		print("Error: Coffee scene failed to load.")
