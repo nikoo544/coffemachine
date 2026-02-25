@@ -1,0 +1,25 @@
+# Lista de Assets Graficos (Imagenes)
+
+Para personalizar tu juego, reemplaza los nodos "ColorRect" en las escenas con nodos "Sprite2D" y usa tus propias imagenes.
+
+## Personajes
+1. **customer.png**: Cliente esperando. (Tamano sugerido: 128x128 px)
+2. **customer_angry.png**: Cliente enojado.
+
+## Objetos
+3. **coffee_cup.png**: Taza de cafe. (Tamano sugerido: 64x64 px)
+4. **coffee_machine.png**: Maquina de cafe. (Tamano sugerido: 150x150 px)
+
+## Interfaz (UI)
+5. **phone_icon.png**: Icono para abrir el celular. (Tamano sugerido: 64x64 px)
+6. **phone_background.png**: Fondo de la pantalla del celular. (Tamano sugerido: 300x500 px)
+
+## Escenario
+7. **background.png**: Fondo de la cafeteria. (Tamano sugerido: 1280x720 px)
+
+# Instrucciones para Reemplazar
+1. Arrastra tus imagenes a la carpeta `assets/` en Godot.
+2. Abre la escena correspondiente (ej: `src/scenes/CoffeeCup.tscn`).
+3. Elimina o oculta el nodo `Visual` (ColorRect).
+4. Agrega un nodo `Sprite2D`.
+5. Arrastra tu imagen a la propiedad `Texture` del Sprite2D.
