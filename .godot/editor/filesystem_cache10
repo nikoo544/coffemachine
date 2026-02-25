@@ -1,0 +1,9 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1772039848
+::res://scenes/::1771992283
+Main.tscn::PackedScene::139762471593760118::1771992283::0::1::::<><><>0<>0<><>::uid://bwq7o7ow8r5oc::::res://scripts/GameController.gd<>uid://ci0nib0jw7tby::::res://scripts/CoffeeMachine.gd<>uid://cqjfi7y6m7v37::::res://scripts/NarrativeManager.gd
+::res://scripts/::1771985765
+CoffeeMachine.gd::GDScript::5386765259182217286::1771985759::0::1::::CoffeeMachine<>Node<><>0<>0<><>::
+Customer.gd::GDScript::5224442840112073005::1771985759::0::1::::Customer<>Resource<><>0<>0<><>::
+GameController.gd::GDScript::3965574936096813486::1771985759::0::1::::GameController<>Node2D<><>0<>0<><>::
+NarrativeManager.gd::GDScript::5914761855944657484::1771985759::0::1::::NarrativeManager<>Node<><>0<>0<><>::

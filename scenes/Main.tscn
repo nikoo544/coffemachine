@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://b8x4q2y51aw1"]
+
+[ext_resource type="Script" uid="uid://bwq7o7ow8r5oc" path="res://scripts/GameController.gd" id="1_controller"]
+[ext_resource type="Script" uid="uid://ci0nib0jw7tby" path="res://scripts/CoffeeMachine.gd" id="2_machine"]
+[ext_resource type="Script" uid="uid://cqjfi7y6m7v37" path="res://scripts/NarrativeManager.gd" id="3_narrative"]
+
+[node name="Main" type="Node2D" unique_id=50008687]
+position = Vector2(598, 235)
+script = ExtResource("1_controller")
+
+[node name="CoffeeMachine" type="Node" parent="." unique_id=277852090]
+script = ExtResource("2_machine")
+
+[node name="NarrativeManager" type="Node" parent="." unique_id=1547607428]
+script = ExtResource("3_narrative")
+
+[node name="UI" type="Control" parent="." unique_id=551203223]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1606248414]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 350.0
+offset_bottom = 150.0
+
+[node name="StatusLabel" type="Label" parent="UI/VBoxContainer" unique_id=455537308]
+layout_mode = 2
+text = "Status: IDLE"
+
+[node name="TempLabel" type="Label" parent="UI/VBoxContainer" unique_id=527123458]
+layout_mode = 2
+text = "Temp: 20.0 C"
+
+[node name="CupVisual" type="Panel" parent="UI" unique_id=248034485]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 51.0
+offset_top = 123.0
+offset_right = 171.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoffeeRect" type="ColorRect" parent="UI/CupVisual" unique_id=1162511334]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.270588, 0.152941, 0.101961, 1)
+
+[node name="MilkRect" type="ColorRect" parent="UI/CupVisual" unique_id=1701883688]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.95, 0.9, 0.8, 1)
+
+[node name="FoamRect" type="ColorRect" parent="UI/CupVisual" unique_id=117456444]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Controls" type="HBoxContainer" parent="UI" unique_id=1125779472]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="GrindButton" type="Button" parent="UI/Controls" unique_id=239332481]
+layout_mode = 2
+text = "Grind Beans"
+
+[node name="BrewButton" type="Button" parent="UI/Controls" unique_id=1696856544]
+layout_mode = 2
+text = "Start/Stop Brew"
+
+[node name="PourButton" type="Button" parent="UI/Controls" unique_id=1723179170]
+layout_mode = 2
+text = "Pour Milk"
+
+[node name="SteamButton" type="Button" parent="UI/Controls" unique_id=869935277]
+layout_mode = 2
+text = "Steam Milk"
+
+[node name="ServeButton" type="Button" parent="UI/Controls" unique_id=379902133]
+layout_mode = 2
+text = "Serve Order"
+
+[node name="Panel" type="Panel" parent="UI" unique_id=1920809722]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -527.0
+offset_top = -13.0
+offset_right = -227.0
+offset_bottom = 187.0
+grow_horizontal = 0
+
+[node name="CustomerLabel" type="Label" parent="UI/Panel" unique_id=1524764047]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 43.0
+text = "Customer: None"
+
+[node name="OrderLabel" type="Label" parent="UI/Panel" unique_id=1743949632]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 280.0
+offset_bottom = 83.0
+text = "Order: -"
+
+[node name="FeedbackLabel" type="Label" parent="UI/Panel" unique_id=446297598]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 100.0
+offset_right = 280.0
+offset_bottom = 123.0
+text = "Feedback: -"
